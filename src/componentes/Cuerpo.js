@@ -2,9 +2,12 @@ import React from "react";
 import libroImagen from "../imagenes/libro.png";
 import webImagen from "../imagenes/web.png";
 import generarFichas from "../funciones/Funciones";
+import Fichas from "./Fichas";
 
 let idFicha = 0;
 let idFichaSeleccionada = 0;
+let fichasGeneradas = "";
+
 function Cuerpo(){
 
     let [objFicha,setObjFicha] = React.useState({
@@ -20,8 +23,16 @@ function Cuerpo(){
         ficha: []
     })
 
-    console.log(objFicha)
-    
+    function obtenerFichaSeleccionada(idFicha){
+        idFichaSeleccionada = idFicha;
+        alert("Ha seleccionado la ficha #" + idFichaSeleccionada)
+    }
+    if(objFicha.ficha.length > 0){
+        fichasGeneradas = objFicha.ficha.map((itemFicha)=>{
+            return <Fichas key={itemFicha.id} objItemFicha= {itemFicha} funcionObtenerFicha = {obtenerFichaSeleccionada}></Fichas>
+
+        })
+    }
     function limpiarObjeto(){
         setObjFicha((objAnterior) =>{
             return{
@@ -47,14 +58,11 @@ function Cuerpo(){
                 return {
                     ...objAnterior,
                     anoPublicacion:""
-                    
                 }
             })
             
         }
         return permitirPaso;
-        
-
     }
     function botonesDeAccion(event){
         event.preventDefault();
@@ -74,16 +82,50 @@ function Cuerpo(){
                     return{
                         ...objAnterior,
                         ficha: fichas
-                       
                     }
                 })
+                limpiarObjeto();
             }
         }
     }
 
-
+    function borrarTodasLasFichas(){
+        if(objFicha.ficha.length === 0){
+            alert("No hay fichas para eliminar");
+        }else{
+            setObjFicha((objAnterior)=>{
+                return{
+                    ...objAnterior,
+                    ficha:[]
+                }
+            })
+            idFicha = 0;
+            fichasGeneradas = "";
+        }
+    }
+    function borrarFichaSeleccionada(){
+        if(idFichaSeleccionada !== 0){
+            let nuevasFichas = objFicha.ficha.filter((itemFicha)=>{
+                if(itemFicha.id !== idFichaSeleccionada){
+                    return itemFicha
+                }
+            })
+            setObjFicha((objAnterior)=>{
+                return{
+                    ...objAnterior,
+                    ficha:nuevasFichas
+                }
+            })
+        }else{
+            alert("Debe seleccionar una ficha para poder eliminarla");
+        }
+        idFichaSeleccionada = 0;
+    }
     function cambiarSeleccion(event){
         limpiarObjeto(event);
+        if(objFicha.ficha.length > 0){
+            borrarTodasLasFichas();
+        }
         cambiarDisplay(event);
     }
     function cambiarDisplay(event){
@@ -115,7 +157,6 @@ function Cuerpo(){
                 <input id="radioBTNLibro" type="radio" className="radioBTN" name="display" value="Libros" checked={objFicha.display === "Libros"} onChange={cambiarSeleccion}></input>
                 <label htmlFor="radioBTNWeb" className="LabelSeleccion" >Fichas APA para Web</label>
                 <input id="radioBTNWeb" type="radio" className="radioBTN" name="display" value="Web" checked={objFicha.display === "Web"} onChange={cambiarSeleccion}></input>
-
             </div>
 
             <div className="CuerpoInterior">
@@ -144,13 +185,15 @@ function Cuerpo(){
                 <div className="SeccionFichas">
                     <h2 className="TituloFichas">Fichas</h2>
                     <p className="TextoExplicativoFichas">Aqui se mostraran las fichas en formato APA que se generen al llenar el formulario</p>
-                    <p className="ContenedorFichas">-No hay fichas para mostrar</p>
-                    <button className="Boton BtnBorrarTodo">Borrar todas las fichas</button>
-                    <button className="Boton BtnBorrarFicha">Borrar una ficha</button>
+                    <div className="ContenedorFichas">
+                        {objFicha.ficha.length === 0 && <p>-No hay fichas para mostrar</p>}
+                        {objFicha.ficha.length > 0 && fichasGeneradas}
+                    </div>
+                    <button className="Boton BtnBorrarTodo" onClick={borrarTodasLasFichas}>Borrar todas las fichas</button>
+                    <button className="Boton BtnBorrarFicha" onClick={borrarFichaSeleccionada}>Borrar una ficha</button>
                 </div>
             </div>
         </div>
     )
 }
-
 export default Cuerpo

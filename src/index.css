@@ -41,7 +41,7 @@ body {
 }
 .CuerpoInterior{
   background-color: #f1f1f1;
-  width: 60%;
+  width: 80%;
   margin: 2% auto;
 }
 .CuadroInputFicha{
@@ -75,3 +75,8 @@ body {
   border: 1px solid black;
   text-align: start;
 }
+.Fichas:hover{
+  cursor: pointer;
+  background-color: #d4d5d6;
+}
+
