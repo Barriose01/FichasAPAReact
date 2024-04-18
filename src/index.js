@@ -1,16 +1,17 @@
-import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Encabezado from './componentes/Encabezado';
-import Cuerpo from './componentes/Cuerpo';
-
+import { BrowserRouter} from "react-router-dom";
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <div>
-  <Encabezado></Encabezado>,
-    <Cuerpo></Cuerpo>
+    <BrowserRouter>
+      <App></App>
+    </BrowserRouter>
   </div>
  
 )

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Fichas(props){
     return(
         <div className="Fichas">

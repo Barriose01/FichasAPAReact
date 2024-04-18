@@ -23,7 +23,6 @@ body {
 }
 .Cuerpo{
   padding: 1%;
-  text-align: center;
 }
 .CuadroImagen{
   margin-bottom: 1%;
@@ -50,10 +49,10 @@ body {
 .CuadroInternoInput{
   display: flex;
   flex-wrap: wrap;
+  text-align: start;
 }
 .LabelFichas{
-  width: 45%;
-  text-align: start;
+  width: 100%;
   margin-bottom: 0.5%;
 }
 .InputTexto{
@@ -75,8 +74,24 @@ body {
   border: 1px solid black;
   text-align: start;
 }
-.Fichas:hover{
+
+.ParrafoFicha:hover{
   cursor: pointer;
-  background-color: #d4d5d6;
+  background-color: #d4d5d6 !important;
+  color: black !important;
+}
+.BloqueImagen{
+  width: 100%;
+}
+.ImagenCard{
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+.TarjetaCita:hover{
+  opacity: 0.5;
 }
 
+a{
+  text-decoration: none;
+}
