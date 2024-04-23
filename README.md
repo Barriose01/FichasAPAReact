@@ -1,59 +1,69 @@
-# Fichas APA libro. 
+# Menu principal
 
-Lo primero que se vera al entrar a la pagina son las opciones para generar una cita bibliografica APA para libros
+Lo primero que se vera al entrar a la pagina sera el menu principal, en donde se le presentaran al usuario dos opciones: Citas para libros y Citas para Web:
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/867e2aaa-af72-404d-a84e-ce737ccfc6c5)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/a2b07d15-5d89-4020-b99c-0482be2f655f)
 
+Al hacer click en alguna de las opciones, entrara al menu del tipo de cita que selecciono.
 
-La pagina cuenta con campos de texto que se utilizaran para generar la ficha
+# Citas APA para libros
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/47f40bd6-cee7-46e5-ba04-a0fe21cc9808)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/932284e3-7bfa-48b8-a1c0-bd512dd52c9c)
 
+La pagina cuenta con campos de texto que se utilizaran para generar la ficha:
+
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/dd624097-761b-4b51-b249-455896ed20cf)
+
+Se tendra una seccion en donde se guardaran todas las citas generadas, las cuales se almacenaran desde la mas nueva hasta la mas antigua:
+
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/07f6b835-82ef-4b61-a863-82d09807ca9b)
 
 Si se llenan los campos y se hace click en 'Generar ficha', aparecera un mensaje indicando que la ficha fue generada con exito
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/9b95bb6a-203a-4898-bccd-fea63b9e64cd)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/7e543987-3877-4d7f-85de-c732f8d5fc9f)
+
+Y aparecera la cita bibliografica en la seccion de citas
+
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/3ae47316-dbde-44f0-99cb-8af89b1aa74b)
 
 
-Y aparecera la cita bibliografica en la seccion de fichas
+# Citas APA para Web 
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/01c5c741-9009-4a33-8877-1b3cf2662f23)
+Estando en el menu principal, si selecciona la opcion de Citas para Web, se redirigira al usuario a la seccion de citas para Web:
 
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/76d649f9-65ca-488b-b63c-186605f3552b)
 
-# Fichas APA para Web 
+Tambien cambian los campos de texto, los cuales estaran adaptados para generar una cita bibliografica APA para contenido Web:
 
-Al hacer click en el boton de 'Fichas APA para Web', cambia el contenido de la pagina
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/9dcd1d3b-79f9-4e34-85d4-6fc46015547d)
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/c5cc7f85-19aa-48c7-9f37-bcc89fb574f3)
+Tambien se cuenta con una seccion en donde se van a almacenar las citas generadas:
 
-
-Tambien cambian los campos de texto, los cuales estaran adaptados para generar una cita bibliografica APA para contenido Web
-
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/61b6fd63-1e35-47eb-af51-95e3a71bd183)
-
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/782c891c-658d-48da-b029-a8c549b1f29b)
 
 De igual forma, se puede generar una cita bibliografica haciendo click en 'Generar ficha"
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/bd40b9b8-5bea-49d9-a12d-ea3f8862cbaa)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/8576eed6-dab3-4ed0-8b8a-0b9cea85a9a4)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/a4fc9c37-6c6c-4fc4-828b-ff106c71a6e3)
 
 
 # Borrar fichas individualmente 
 
 Para borrar fichas individualmente, se debe hacer click en una de las fichas que se tengan
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/d29ee609-e482-43e2-b854-86ee283d226e)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/f9904075-6c2f-4669-8e4c-307a32200553)
 
+Y hacer click en el boton 'Borrar cita seleccionada'
 
-Y hacer click en el boton 'Borrar una ficha'
-
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/8411e3f8-3c8d-453d-ae37-38829ea479b4)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/20861f71-e618-4673-9111-5c3f108158f4)
 
 
 # Borrar todas las fichas
 
-Para borrar todas las fichas, se hace click en el boton 'Borrar todas las fichas'
+Para borrar todas las fichas, se hace click en el boton 'Borrar todas las citas'
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/3a48c568-4a51-4106-923b-96b173609ff9)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/6006c930-d40b-4e4c-80de-4dd9a2a9da85)
+![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/75fb01f7-6075-4541-8a3f-6856fe1974de)
 
 
-![image](https://github.com/Barriose01/FichasAPAReact/assets/107152796/64789136-015c-4795-b95b-4cdfd453e4bd)
+
